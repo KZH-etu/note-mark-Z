@@ -1,13 +1,18 @@
+import { ActionButtonsRow, Content, DraggableTopBar, NotesPreviewList, RootLayout, Sidebar } from "@/components"
 
 
-function App(){
-
+const App = () => {
   return (
-    <div className="flex h-full items-center justify-center">
-      <span className="text-4xl text-blue-500">
-        Hello From Electron
-      </span>
-    </div>
+    <>
+      <DraggableTopBar />
+      <RootLayout>
+        <Sidebar className="p-2">
+          <ActionButtonsRow className="flex justify-between mt-1"/>
+          <NotesPreviewList className="mt-3 space-t-1" />
+        </Sidebar>
+        <Content className="border-l bg-zinc-900/50 border-l-white/20">Content</Content>
+      </RootLayout>
+    </>
   )
 }
 
