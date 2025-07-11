@@ -10,4 +10,12 @@
   html, body {
     @apply h-full select-none overflow-hidden font-serif antialiased text-white bg-transparent;
   }
+
+  header {
+    -webkit-app-region: drag;
+  }
+
+  button {
+    -webkit-app-region: no-drag;
+  }
 }
