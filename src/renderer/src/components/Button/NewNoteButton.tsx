@@ -5,8 +5,9 @@ import { LuFilePlus2 } from "react-icons/lu";
 
 export const NewNoteButton = ({...props}:  ActionButtonProps) => {
   const createEmtyNote = useSetAtom(createEmptyNoteAtom);
-  const handleCreation = () => {
-    createEmtyNote();
+
+  const handleCreation = async () => {
+    await createEmtyNote();
   }
 
   return (
